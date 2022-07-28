@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <title>Ty Allembert</title>
 </head>
 <body>
-    <p>Content soon to come!</p>
+    <div class = "main_container">
+        <div class = "title_container">
+            <h1 class = "title_name">Ty Allembert</h1>
+            <p class = "title_info">Web/Software <span class = "span_developer">Developer</span></p>
+        </div>
+        <div class = "all_websites_container">
+            <a class = "salvation_container" href="http://www.salvationsuppersvt.com" target="_blank" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+                <p class = "project_name">Salvation Suppers</p>
+                <div class = "project_info_container">
+
+                </div>
+            </a>
+            <a class = "memory_container" href="http://tallembe.w3.uvm.edu/CS120/Memory-Testing/" target="_blank" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+                <p class = "project_name">Memory Game</p>
+            </a>
+            <a class = "scheduling_container" href="https://tallembe.w3.uvm.edu/cems-scheduling-assistant/live/" target="_blank" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+                <p class = "project_name">UVM Scheduling Assistant</p>
+            </a>
+            
+        </div>
+    </div>
 </body>
 </html>

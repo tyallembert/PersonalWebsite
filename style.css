@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    font-weight: 800;
+    --color_dark_1: rgb(11, 20, 36);
+    --color_dark_2: rgb(32, 47, 79);
+    --color_light_1: rgb(255, 255, 255);
+    --color_light_2: rgb(112, 198, 255);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(315deg, var(--color_dark_1), var(--color_dark_2));
+    text-shadow: 0px 0px 3px black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+a, a:visited, h1, p{
+    text-decoration: none;
+    color: white;
+}
+.title_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2;
+}
+.title_name{
+    font-size: 3.3em;
+    transform: translateY(10px);
+    color: var(--color_light_2);
+    transition: all 200ms ease-in-out;
+}
+.title_info{
+    transform: translateY(40px);
+    margin-right: 20px;
+}
+.span_developer{
+    color: var(--color_light_2);
+}
+.main_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    min-width: 550px;
+    margin-top: 5em;
+}
+.all_websites_container{
+    position: relative;
+    display: grid;
+    grid-template-columns: "auto auto";
+    grid-template-areas: 
+    "salvation memory"
+    "scheduling memory";
+    padding: 5%;
+    box-shadow: inset 0px 0px 3px white,
+    0px 2px 10px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+.all_websites_container::after{
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.13);
+    filter:blur(8px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.all_websites_container>*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10em;
+    height: auto;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 2%;
+    box-shadow: inset 0px 0px 3px var(--color_light_1),
+    1px 3px 10px black;
+    z-index: 1;
+    transition: all 300ms ease;
+}
+.salvation_container{
+    grid-area: salvation;
+}
+.memory_container{
+    grid-area: memory;
+}
+.scheduling_container{
+    grid-area: scheduling;
+}
+.project_name{
+    transition: all 300ms ease-in-out;
+}
+.project_info_container{
+    display: none;
+    transition: all 500ms ease-in-out;
+}
+/* active project */
+.active_project{
+    position: relative;
+    background-color:rgb(153, 204, 255);
+    height: 15vh;
+    /* animation: heightAnimation 500ms linear 0ms 1; */
+    transition: all 500ms ease-in-out;
+}
+.active_project>p{
+    position: absolute;
+    left: 0;
+    top: -27px;
+    font-size: 2em;
+    transition: all 200ms ease-in-out;
+}
