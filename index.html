@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css?id=1234">
+    <script src="script.js?id=1234"></script>
     <script
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d8117dcf7d.js" crossorigin="anonymous"></script>
     <title>Ty Allembert</title>
 </head>
 <body>
@@ -19,19 +20,40 @@
             <p class = "title_info">Web/Software <span class = "span_developer">Developer</span></p>
         </div>
         <div class = "all_websites_container">
-            <a class = "salvation_container" href="http://www.salvationsuppersvt.com" target="_blank" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+            <div class = "salvation_container" onclick="showInfo(this)" onmouseout="hideInfo(this)">
                 <p class = "project_name">Salvation Suppers</p>
-                <div class = "project_info_container">
-
-                </div>
-            </a>
-            <a class = "memory_container" href="http://tallembe.w3.uvm.edu/CS120/Memory-Testing/" target="_blank" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+            </div>
+            <div class = "memory_container" onclick="showInfo(this)" onmouseout="hideInfo(this)">
                 <p class = "project_name">Memory Game</p>
-            </a>
-            <a class = "scheduling_container" href="https://tallembe.w3.uvm.edu/cems-scheduling-assistant/live/" target="_blank" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+            </div>
+            <div class = "scheduling_container" onclick="showInfo(this)" onmouseout="hideInfo(this)">
                 <p class = "project_name">UVM Scheduling Assistant</p>
-            </a>
+            </div>
+            <div class = "signup_container" onclick="showInfo(this)" onmouseout="hideInfo(this)">
+                <p class = "project_name">Secure Signup</p>
+            </div>
             
+        </div>
+    </div>
+    <div class = "footer">
+        <div class = "socials">
+            <a href = "https://github.com/tyallembert">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href = "https://www.linkedin.com/in/ty-allembert/">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href = "mailto: tyallembert@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <!-- <i class="fa-solid fa-circle-envelope"></i> -->
+        </div>
+    </div>
+
+    <!-- ===Project popup=== -->
+    <div class = "project_popup" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+        <div class = "project_popup_title">
+            <h1>Placeholder</h1>
         </div>
     </div>
 </body>
