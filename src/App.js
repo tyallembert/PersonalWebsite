@@ -25,26 +25,27 @@ function App() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-        gsap.to(heroRef.current, 
-          {
-              y: 500,
-              ease: "none",
-              scrollTrigger: {
-                  scroller: infoContainer.current,
-                  trigger: aboutRef.current,
-                  start: "top bottom",
-                  end: "top+=200 top",
-                  scrub: true,
-                }
-          });
+      gsap.to(heroRef.current, 
+        {
+            y: 500,
+            ease: "none",
+            scrollTrigger: {
+                scroller: infoContainer.current,
+                trigger: aboutRef.current,
+                start: "top bottom",
+                end: "top+=200 top",
+                scrub: true,
+              }
+        });
       });
       return () => ctx.revert(); // <-- CLEANUP!
   }, [])
 
   useEffect(() => {
-    mainContainer.current.addEventListener('scroll', checkScroll, true);
+    let mainCopy = mainContainer.current;
+    mainCopy.addEventListener('scroll', checkScroll, true);
     return () => {
-    mainContainer.current.removeEventListener("scroll", checkScroll, true);
+      mainCopy.removeEventListener("scroll", checkScroll, true);
   };
   }, [])
 
