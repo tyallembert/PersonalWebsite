@@ -1,0 +1,18 @@
+
+$color-1: #1b3146;
+$color-2: #384b5e;
+$color-3: #49c4f9;
+$color-4: #ffffff;
+
+$outer-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+$inner-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.8);
+
+$text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+$mobileSize: 600px;
+
+h1{
+    font-family: "Sigmar", cursive;
+    text-shadow: $text-shadow;
+    color: $color-3;
+}

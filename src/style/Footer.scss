@@ -1,0 +1,55 @@
+@import "variables.scss";
+
+.footerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width:95%;
+    height: 50px;
+    .linksContainer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        width: 20%;
+        .logo{
+            transition: all 200ms ease-out;
+            &:hover{
+                transform: scale(1.25);
+            }
+            svg{
+                width: 30px;
+            }
+            .github{
+                path{
+                    fill: #fff;
+                    stroke: #fff;
+                }
+            }
+            .linkedin{ 
+                .background{
+                    fill: transparent;
+                }
+            }
+            .mail{
+                .background{
+                    fill: transparent;
+                    stroke: transparent;
+                    stroke-width: 5;
+                }
+                .traingle-shadow{
+                    fill: transparent;
+                }
+                .zig-zag{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobileSize) {
+    .footerContainer{
+        width: 80%;
+    }
+}

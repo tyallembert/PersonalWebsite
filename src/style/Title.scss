@@ -1,0 +1,80 @@
+@import "./variables.scss";
+.titleContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    // z-index: 1;
+    .title{
+        position: absolute;
+        left: 0;
+        text-transform: capitalize;
+        font-size: 3em;
+        margin: 0;
+        padding: 0;
+        color: $color-3;
+        text-shadow: $text-shadow;
+        margin-left: 0.4em;
+        font-family: "Sigmar", cursive;
+        transform: translateY(14px);
+        min-width: 350px;
+        z-index: 2;
+        animation: titleAnimation 500ms ease-in-out;
+    }
+    .resume{
+        position: absolute;
+        right: 0;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-decoration: none;
+        margin-right: 0.8em;
+        font-family: "Sigmar", cursive;
+        text-shadow: $text-shadow;
+        transform: translateY(25px);
+        z-index: 2;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+        &:hover{
+            color: $color-3;
+        }
+    }
+    .titleFadeOut{
+        animation: titleOut 2150ms ease-in-out;
+    }
+}
+@keyframes titleAnimation {
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    25%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(14px);
+        opacity: 1;
+    }
+}
+@keyframes titleOut {
+    0%{
+        transform: translateY(14px);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}

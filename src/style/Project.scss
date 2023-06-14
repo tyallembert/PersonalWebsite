@@ -1,0 +1,24 @@
+@import "variables.scss";
+.projectPreview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: $outer-shadow, $inner-shadow;
+    opacity: 0.7;
+    transition: all 0.3s cubic-bezier(0.1, -0.6, 0.3, 1.6);
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        opacity: 1;
+    }
+    h2{
+        color: white;
+        text-shadow: $text-shadow;
+        text-align: center;
+        font-size: 1.2em;
+        width: 80%;
+        font-family: 'Anton', sans-serif;
+    }
+}
