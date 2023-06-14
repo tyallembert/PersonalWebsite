@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import '../style/Education.scss';
 import uvm from './../images/uvm.jpg';
 import {gsap} from 'gsap';
@@ -34,7 +34,7 @@ function Education(props) {
                 });
         });
         return () => ctx.revert(); // <-- CLEANUP!
-    }, [])
+    }, [mainContainer])
 
   return (
     <div className='section3' id='education' ref={props.educationRef}>

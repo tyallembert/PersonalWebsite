@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import '../style/Nav.scss';
 import Hamburger from './Hamburger';
 
-function Nav(props) {
+function Nav() {
   const [showingNav, setShowingNav] = useState(false);
 
   useEffect(() => {
@@ -13,19 +13,24 @@ function Nav(props) {
   const toggleNav = () => {
     setShowingNav(!showingNav);
   }
-  const changePage = (page) => {
-    props.setActivePage(page.target.innerText.toLowerCase());
-    toggleNav();
-}
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const option = e.target.className.split(' ')[0];
+    const element = document.getElementById(option);
+    element.scrollIntoView({behavior: "smooth"});
+    
+  }
+
 
   return (
     <div className="navContainer">
         <div className={`navLinks ${showingNav ? 'showingNav' : ''}`}>
-            <a className='navLink' href="#hero">Home</a>
-            <a className='navLink' href="#about">About</a>
-            <a className='navLink' href="#education">Education</a>
-            <a className='navLink' href="#projects">Projects</a>
-            <a className='navLink' href="">Contact</a>
+            <button className='hero navLink' onClick={handleClick}>Home</button>
+            <button className='about navLink' onClick={handleClick}>About</button>
+            <button className='education navLink' onClick={handleClick}>Education</button>
+            <button className='projects navLink' onClick={handleClick}>Projects</button>
+            {/* <button className='navLink' id={""} onClick={handleClick}>Contact</button> */}
         </div>
         <Hamburger showingNav={showingNav} toggleNav={toggleNav}/>
     </div>

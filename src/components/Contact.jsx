@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
 import "./../style/Contact.scss";
 
-function Contact(props) {
+function Contact() {
     
     return (
         <div className="contactContainer">

@@ -5,7 +5,7 @@ import ty from './../images/ty.png';
 
 
 // function Hero(props) {
-const Hero = forwardRef((props, ref) => {
+const Hero = forwardRef((props) => {
 
   return (
     <div className='hero' id='hero' ref={props.heroRef}>

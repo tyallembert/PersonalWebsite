@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../style/Footer.scss';
 
 function Footer() {
@@ -19,7 +18,7 @@ function Footer() {
                     <path className="n" d="M59.5 128.5V57.5H81V67C81 67 85.5 55.5 103 55.5C128.5 55.5 128.5 80.5 128.5 80.5V128.5H106V90.5C106 90.5 107 75.5 93.5 75.5C80 75.5 81 90.5 81 90.5V128.5H59.5Z" fill="white"/>
                 </svg>
             </a>
-            <a className="logo mail" href="mailto:recipient@example.com">
+            <a className="logo mail" href="mailto:tyallembert@gmail.com">
                 <svg className="mail" viewBox="0 0 142 109" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className="background" d="M1 13C1 6.37258 6.37258 1 13 1H129C135.627 1 141 6.37258 141 13V95C141 101.627 135.627 107 129 107H13C6.37258 107 1 101.627 1 95V13Z" />
                     <path className="triangle-shadow" d="M123.5 107L71 66L123.5 24.5V107Z"/>

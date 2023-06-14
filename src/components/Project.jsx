@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./../style/Project.scss";
 
 function Project(props) {
     const [showingProject, setShowingProject] = useState(false);
+    useEffect(() => {
+        setShowingProject(false);
+    }, [])
     const style = {
         gridColumn: props.gridColStart + '/' + props.gridColEnd,
         gridRow: props.gridRowStart + '/' + props.gridRowEnd,

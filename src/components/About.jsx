@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../style/About.scss';
@@ -33,7 +33,7 @@ function About(props) {
                 });
         });
         return () => ctx.revert(); // <-- CLEANUP!
-    }, [])
+    }, [mainContainer])
 
     return (
         <div className='section2' ref={props.aboutRef}>
