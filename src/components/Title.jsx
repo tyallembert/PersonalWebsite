@@ -23,7 +23,7 @@ function Title(props) {
     return (
         <div className="titleContainer">
             <h1 className="title" key={props.activePage}>{activePage}</h1>
-            <a href={pdf} className="resume" target="_blank">Resume</a>
+            <a href={pdf} className="resume" target="_blank" rel="noreferrer">Resume</a>
         </div>
     );
 }
