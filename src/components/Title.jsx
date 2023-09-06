@@ -12,12 +12,9 @@ function Title(props) {
             setTimeout(() => {
                 setActivePage(props.activePage);
             }, 150);
-            console.log("OUT")
         }else{
             document.querySelector(".title").classList.remove("titleFadeOut");
-            console.log("IN")
         }
-        // setActivePage(props.activePage);
     });
 
     return (

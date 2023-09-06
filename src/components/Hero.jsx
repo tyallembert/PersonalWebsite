@@ -1,7 +1,6 @@
 
 import { forwardRef } from 'react';
 import '../style/Hero.scss';
-import ty from './../images/ty.png';
 
 
 // function Hero(props) {
@@ -37,7 +36,7 @@ const Hero = forwardRef((props) => {
             </div>
         </div>
         <div className='rightSide'>
-            <img className='ty' src={ty} alt='Ty Allembert' />
+            <img className='ty' src="images/ty_smile.png" alt='Ty Allembert' />
         </div>
     </div>
   );

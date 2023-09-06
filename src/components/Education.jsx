@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react';
 import '../style/Education.scss';
-import uvm from './../images/uvm.jpg';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -39,12 +38,11 @@ function Education(props) {
   return (
     <div className='section3' id='education' ref={props.educationRef}>
         <div className='leftSide' ref={pic}>
-            <img className='uvm' src={uvm} alt='University of Vermont' />
-            <h1 className='uvmHeader'>UVM</h1>
+            <img className='uvm' src="images/uvm_campus.png" alt='University of Vermont' />
         </div>
         <div className='rightSide'>
             <h1 className='header'>Education</h1>
-            <p>
+            <p className='paragraph'>
                 I graduated from the University of Vermont in 2023 with a Bachelor's Degree in Computer Science.
                 I started my college journey as a mechanical engineer. For one of my required classes I was introduced
                 to the beautiful language we all know as Python. I fell in love with coding and decided to switch my major

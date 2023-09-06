@@ -1,4 +1,5 @@
 @import "variables.scss";
+
 .projectPreview{
     display: flex;
     align-items: center;
@@ -20,5 +21,95 @@
         font-size: 1.2em;
         width: 80%;
         font-family: 'Anton', sans-serif;
+    }
+}
+
+.project {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-1;
+    // padding: 2rem;
+    z-index: 2;
+    color: white;
+    animation: fadeIn 500ms ease-in-out;
+    .projectLinks{
+        position: absolute;
+        top: 5%;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 15%;
+    }
+    .projectInfo {
+        margin-left: 2rem;
+        margin-top: 2rem;
+        width: 40%;
+        .projectTitle {
+            font-size: 2rem;
+            margin: 0;
+            font-family: "Sigmar", cursive;
+            text-shadow: $text-shadow;
+        }
+    }
+    .projectImages {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        .projectImage {
+            position: absolute;
+            width: 100%;
+            transition: all 200ms ease-in-out;
+            &.image1 {
+                top: 3rem;
+                right: 0rem;
+                transform: translateX(50%);
+            }
+            &.image2 {
+                top: 10rem;
+                right: 0rem;
+                transform: translateX(45%);
+            }
+            &.image3 {
+                top: 17rem;
+                right: 0rem;
+                transform: translateX(40%);
+            }
+            &:hover {
+                z-index: 2;
+                transform: translateX(0%);
+            }
+        }
+    }
+    .projectButton {
+        position: absolute;
+        bottom: 5%;
+        left: calc(50% - 50px);
+        background-color: $color-2;
+        color: white;
+        padding: 1rem 2rem;
+        border: solid 1px white;
+        border-radius: 50px;
+        font-weight: 800;
+        font-size: 1rem;
+        transition: all 200ms ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

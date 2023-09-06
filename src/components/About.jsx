@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../style/About.scss';
-import TyPic from "../images/ty-2.jpeg";
+// import TyPic from "images/ty-2.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +38,7 @@ function About(props) {
     return (
         <div className='section2' ref={props.aboutRef}>
             <div className='leftSide' ref={pic1}>
-                <img className='me' src={TyPic} alt='Me' />
+                <img className='me' src="images/ty-2.jpeg" alt='Me' />
             </div>
             <div className='rightSide' id='about'>
                 <h1 className='header'>About Me</h1>
