@@ -11,7 +11,7 @@ const Contact = () => {
                     Email
                 </a>
 
-                <button className="contactButton" >Text</button>
+                {/* <button className="contactButton" >Text</button> */}
             </div>
         </div>
     );
