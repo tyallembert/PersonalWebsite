@@ -1,14 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '../style/Nav.scss';
 import Hamburger from './Hamburger';
 
 function Nav() {
   const [showingNav, setShowingNav] = useState(false);
 
-  useEffect(() => {
-    console.log("refreshing")
-    console.log(showingNav)
-  }, [showingNav])
 
   const toggleNav = () => {
     setShowingNav(!showingNav);
@@ -19,6 +15,7 @@ function Nav() {
     const option = e.target.className.split(' ')[0];
     const element = document.getElementById(option);
     element.scrollIntoView({behavior: "smooth"});
+    setShowingNav(false);
     
   }
 

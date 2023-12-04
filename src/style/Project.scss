@@ -25,12 +25,13 @@
 }
 
 .project {
-    position: absolute;
-    inset: 0;
+    position: relative;
     display: flex;
     justify-content: space-between;
     background-color: $color-1;
-    // padding: 2rem;
+    padding: 1rem;
+    grid-row: 1/5;
+    grid-column: 1/5;
     z-index: 2;
     color: white;
     animation: fadeIn 500ms ease-in-out;
@@ -88,7 +89,7 @@
     }
     .projectButton {
         position: absolute;
-        bottom: 5%;
+        bottom: 2rem;
         left: calc(50% - 50px);
         background-color: $color-2;
         color: white;
@@ -103,6 +104,42 @@
             cursor: pointer;
         }
     }
+}
+
+@media screen and (max-width: $mobileSize) {
+    .project {
+        flex-direction: column;
+        padding-bottom: 5rem;
+        .projectInfo {
+            width: 100%;
+            margin: 0;
+            .projectTitle {
+                font-size: 1.5rem;
+            }
+        }
+        .projectImages {
+            width: 100%;
+            .projectImage {
+                position:relative;
+                &.image1 {
+                    top: 0rem;
+                    right: 0rem;
+                    transform: translateX(0%);
+                }
+                &.image2 {
+                    top: 0rem;
+                    right: 0rem;
+                    transform: translateX(0%);
+                }
+                &.image3 {
+                    top: 0rem;
+                    right: 0rem;
+                    transform: translateX(0%);
+                }
+            }
+        }
+    }
+
 }
 
 @keyframes fadeIn {

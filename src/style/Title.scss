@@ -34,7 +34,7 @@
         font-family: "Sigmar", cursive;
         text-shadow: $text-shadow;
         transform: translateY(25px);
-        z-index: 2;
+        z-index: 11;
         cursor: pointer;
         transition: all 150ms ease-in-out;
         &:hover{

@@ -5,8 +5,6 @@ import pdf from "./../resume.pdf";
 function Title(props) {
     const [activePage, setActivePage] = useState("home");
     useEffect(() => {
-        console.log(props.activePage);
-        console.log(activePage);
         if(props.activePage !== activePage) {
             document.querySelector(".title").classList.add("titleFadeOut");
             setTimeout(() => {

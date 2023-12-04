@@ -37,3 +37,14 @@
         }
     }
 }
+@media screen and (max-width: $mobileSize) {
+    .contactContainer{
+        width: 90%;
+        .heading {
+            text-align: center;
+        }
+        .buttonContainer{
+            width: 100%;
+        }
+    }
+}
